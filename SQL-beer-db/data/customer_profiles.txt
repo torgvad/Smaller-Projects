@@ -1,0 +1,10 @@
+Lewis Hunter, LewisHunter@yahoo.com, (501)945-9860, Lager;Red Ale, Stout
+Connor Robertson, ConnorRobertson@gmail.com, (334)457-6879, Stout;IPA, Lager
+Jamie Armstrong, JamieArmstrong@website.org, (530)270-1485, Pale Ale;IPA, Stout;Sour
+Cory Sherman, CorySherman@netscape.gov, (424)456-3923, Sour, Stout
+Jaden Gillespie, JadenGillespie@gmail.com, (623)670-9292, Red Ale, IPA
+Charlie Martin, CharlieMartin@yahoo.com, (401)552-4134, Lager, IPA;Stout;Sour
+Haiden Richards, HaidenRichards@nsa.gov, (289)821-5301, IPA, Red Ale
+Jess Kennedy, JessKennedy@cia.gov, (424)276-2547, Sour;Pale Ale;IPA, Lager;Stout
+Maddox West, MaddoxWest@gmail.com, (219)241-4925, Pale Ale, Lager
+Vic Walker, VicWalker@yahoo.com, (505)876-1179, Lager;Stout, Sour

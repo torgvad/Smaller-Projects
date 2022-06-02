@@ -1,0 +1,25 @@
+Firestone Walker's Pivo Pilsner, 40, 5.3, CA, 7, 10.24, Lager, 15
+Coors Banquet, 15, 14, CO, 5, 8, Lager, 9
+Victory Brewing Prima Pils, 43, 5.3, PA, 8, 11, Lager, 8
+Pilsner Urquell Beer, 40, 5.1, Czech Republic, 32, 37.05, Lager, 5
+Great Lakes Eliot Ness Amber Lager, 27, 6.1, OH, 8, 10.99, Lager, 11
+Sierra Nevada Pale Ale, 38, 5.6, CA, 8, 10.99, Pale Ale, 13
+Deschutes Mirror Pond, 40, 5, OR, 8.5, 10.49, Pale Ale, 7
+Odell Drumroll Hazy Pale Ale, 51, 5.3, CO, 8, 10.99, Pale Ale, 8
+3 Floyds Zombie Dust, 62, 6.5, IN, 11, 15.39, Pale Ale, 5
+Samuel Smith Organic Pale Ale, 31, 5, England, 7.75, 10.34, Pale Ale, 12
+Deschutes Fresh Squeezed IPA, 60, 6.4, OR, 8.74, 11.99, IPA, 10
+Victory DirtWolf Double IPA, 85, 8.7, PA, 8, 10.19, IPA, 7
+Samuel Adams Wicked Easy Light & Hazy Lager, 12, 4.7, MA, 15, 17.99, IPA, 15
+Ballast Point Sculpin IPA, 70, 7, CA, 6, 8.87, IPA, 14
+Glutenberg India Pale Ale, 76, 6, Canada, 12, 14.99, IPA, 6
+New Belgium Fat Tire Amber Ale, 22, 5.2, CO, 7, 10.99, Red Ale, 17
+Smithwick's Red Ale, 20, 5, Ireland, 7.1, 10.29, Red Ale, 10
+North Coast Red Seal Ale, 42, 5.4, CA, 7, 10.99, Red Ale, 7
+Westbrook Gose, 5, 4, SC, 10, 12.99, Sour, 5
+Odell Sippin' Pretty, 10, 4.5, CO, 9, 11.99, Sour, 10
+Victory Brewing Sour Monkey, 10, 9.5, PA, 10, 12.99, Sour, 4
+North Coast Old Rasputin Russian Imperial Stout, 75, 9, CA, 8, 10.99, Stout, 6
+Left Hand Milk Stout, 25, 6, CO, 8, 11.86, Stout, 10
+Samuel Smith Oatmeal Stout, 32, 5, England, 2, 4.99, Stout, 15
+Left Hand Peanut Butter Milk Stout, 25, 6, CO, 10, 12.99, Stout, 8

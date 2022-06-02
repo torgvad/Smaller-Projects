@@ -1,0 +1,11 @@
+10, 6418, 2850 Red Hill Ave #2,Santa Ana,California(CA),92705, 2021-06-01, 2021-06-02, 25;24;1, 3;1;2, 712561506
+7, 9621, 0326 133rd Hwy,Carbondale,Colorado(CO),81623, 2021-06-02, 2021-06-04, 9, 5, 634021125
+1, 2312, 355 Jacob St Seekonk,Massachusetts(MA),02771, 2021-06-02, 2021-06-04, 2;8, 2;4, 289068523
+10, 6418, 2850 Red Hill Ave #2,Santa Ana,California(CA),92705, 2021-06-06, 2021-06-06, 25;2, 5;1, 501504431
+2, 9989, 3051 N D St,San Bernardino,California(CA),92405, 2021-06-06, 2021-06-07, 12, 7, 523521635
+3, 1359, 69 Radcliff Dr Doylestown,Pennsylvania(PA),18901, 2021-06-08, 2021-06-10, 7;9;14;3, 6;1;3;2, 770422778
+5, 8085, Po Box 848,Franktown,Colorado(CO),80116, 2021-06-10, 2021-06-10, 16;17;18, 2;1;5, 574561179
+6, 0696, 9810 County Rd #306 Glenwood,Alabama(AL),36034, 2021-06-12, 2021-06-14, 1;5, 3;7, 616931589
+4, 8779, 936 E Fairway Dr #APT 12,Colton,California(CA),92324, 2021-06-12, 2021-06-13, 20;21, 2;1, 046948808
+8, 7649, 8 Hollow Rd,Telford,Pennsylvania(PA),18969, 2021-06-13, 2021-06-15, 20;21, 2;1, 313413732
+9, 2781, 2850 Red Hill Ave #2,Santa Ana,California(CA),92705, 2021-06-13, 2021-06-15, 9, 1, 845572901
