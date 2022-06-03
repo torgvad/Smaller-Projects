@@ -16,6 +16,7 @@ def get_data(file_name):
          return_list.append(line[:len(line)-1].split(', '))
     return return_list
 
+#create all the database tables and fill them with dummy data from txt files
 def create_beer_db():
     beers_list = get_data("data/beers.txt")
     cursor.execute('''CREATE TABLE beer_stock(
@@ -54,7 +55,6 @@ def create_customer_profile_db():
                         VALUES
                         (?, ?, ?, ?, ?)''', customer)
     conn.commit()
-    print(cursor.execute('''SELECT * FROM customer_profiles;''').fetchall())
 
 
 def create_customer_info_db():
@@ -92,7 +92,6 @@ def create_purchases_db():
                     FOREIGN KEY (CustomerID) REFERENCES customer_profiles (CustomerID));''')
     conn.commit()
     for customer in customer_profile_list:
-        print(customer)
         cursor.execute('''INSERT INTO purchases
                         (CustomerID, Last_4_Card_Nums, Addr, Sale_date, Ship_date, Beer_IDs, Quantities, Tracking)
                         VALUES
@@ -100,6 +99,7 @@ def create_purchases_db():
     conn.commit()
 
 
+#run all the table generators
 def db_generator():
     create_beer_db()
     create_customer_info_db()
@@ -118,6 +118,7 @@ class Window(QWidget):
         self.setGeometry(500, 200, 1400, 800)
         self.createUI()
 
+    #create all buttons, table, and textbox
     def createUI(self):
         global tableWidget, search_bar
         button_layout = QVBoxLayout()
@@ -162,7 +163,7 @@ class Window(QWidget):
         button_layout.addWidget(unpurchased_local_button)
 
         local_no_dislike_button = QPushButton()
-        local_no_dislike_button.setText("Customer's Local Beer")
+        local_no_dislike_button.setText("Local Beer")
         local_no_dislike_button.clicked.connect(self.diplay_local_beer)
         button_layout.addWidget(local_no_dislike_button)
 
@@ -199,7 +200,7 @@ class Window(QWidget):
 
     def display_last_x_purchases(self):
         self.delete_previous_data()
-        data = cursor.execute('''SELECT * FROM purchases;''').fetchmany(int(search_bar.text()))
+        data = cursor.execute('''SELECT * FROM purchases ORDER BY PurchaseID DESC;''').fetchmany(int(search_bar.text()))
         print(data)
         self.create_purchase_table_labels()
         self.display_info(data)
@@ -208,7 +209,7 @@ class Window(QWidget):
     def display_unpurchased_preferred(self):
         self.delete_previous_data()
         data = cursor.execute('''SELECT DISTINCT Preferences FROM customer_profiles WHERE CustomerID = ?;''', [int(search_bar.text())]).fetchall()
-        beer_list = self.clean_prefered_beer_list(data)
+        beer_list = data[0][0].split(";")
         data = cursor.execute('''SELECT DISTINCT Beer_IDs FROM purchases WHERE CustomerID = ?;''', [int(search_bar.text())]).fetchall()
         purchase_list = self.clean_prefered_purchase_list(data)
         purchase_list.append('')
@@ -247,12 +248,8 @@ class Window(QWidget):
         self.display_info(data)
         tableWidget.resizeColumnsToContents()
 
-    def clean_prefered_beer_list(self, data):
-        beer_list = []
-        for itemlist in data:
-            beer_list = itemlist[0].split(';')
-        return beer_list
-
+    # Clean the list of beer IDs gotten from purchase table
+    # List is gone through and all strings are seperated and made into own list items
     def clean_prefered_purchase_list(self, data):
         purchase_list = []
         for itemlist in data:
@@ -262,11 +259,12 @@ class Window(QWidget):
                     purchase_list.append(int(item))
         return purchase_list
 
+    # Effectively removes all rows and resets is back to 50
     def delete_previous_data(self):
         tableWidget.setRowCount(0)
         tableWidget.setRowCount(50)
 
-
+    # Populate first column with labels for purchases
     def create_purchase_table_labels(self):
         purchase_labels = ["ID", "Customer", "Last 4 Card Digits", "Address", "Sale Date", "Ship Date", "Beer IDs", "Quantities", "Tracking Num"]
         column = 0
@@ -274,6 +272,7 @@ class Window(QWidget):
             tableWidget.setItem(0, column, QTableWidgetItem(str(label)))
             column += 1
 
+    # Populate first column with labels for beer
     def create_beer_table_labels(self):
         beer_labels = ["Name", "IBU", "% Alcohol", "Brewery Location", "Price", "Style", "Stock"]
         column = 0
@@ -281,6 +280,7 @@ class Window(QWidget):
             tableWidget.setItem(0, column, QTableWidgetItem(str(label)))
             column += 1
 
+    # Take list of data and appropriately place into table
     def display_info(self, sql_data):
         current_row = 1
         current_column = 0
